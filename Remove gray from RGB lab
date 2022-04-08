@@ -1,0 +1,9 @@
+R = int(input())
+G = int(input())
+B = int(input())
+
+list=[R,G,B]
+
+gray = min(list)
+
+print(R-gray,G-gray,B-gray)
