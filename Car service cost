@@ -1,0 +1,28 @@
+print("Enter desired auto service:")
+dservice = str(input())
+cost = 0
+oil_change ="Oil change"
+tire_rotation = "Tire rotation"
+car_wash = "Car wash"
+
+
+if dservice == oil_change:
+    service = oil_change
+    cost = 35
+elif dservice == tire_rotation:
+    service = tire_rotation
+    cost = 19
+elif dservice == car_wash:
+    service = car_wash
+    cost = 7
+elif dservice != oil_change or dservice != tire_rotation or dservice != car_wash:
+    service="Error: Requested service is not recognized"
+    cost = 0
+    
+if cost == 0:
+    print("You entered:",dservice)
+    print(service)
+    
+if cost != 0:
+    print("You entered:",service)
+    print("Cost of ",service.lower(),": $",cost,sep='')
