@@ -1,0 +1,60 @@
+total = int(input())
+
+if total <= 0:
+    print("No change")
+    total = 0
+    
+if total != 0:
+    num_dollars = total // 100
+    total %= 100
+if total != 0:
+    num_quarters = total // 25
+    total %= 25
+if total != 0:
+    num_dimes = total // 10
+    total %= 10
+if total != 0:
+    num_nickels = total // 5
+    total %= 5
+if total != 0:
+        num_pennies = total //1
+        total %= 1
+
+if num_dollars == 1:
+    d_p = "Dollar"
+if num_dollars >1:
+    d_p = "Dollars"
+if num_dollars >0:
+    print(num_dollars,d_p)
+
+if num_quarters >0:
+    if num_quarters == 1:
+        q_p = "Quarter"
+    if num_quarters >1:
+        q_p = "Quarters"
+if num_quarters >0:
+    print(num_quarters,q_p)
+    
+if num_dimes >0:
+    if num_dimes ==1:
+        d_p = "Dime"
+    if num_dimes >1:
+        d_p = "Dimes"
+if num_dimes >0:
+    print(num_dimes,d_p)
+
+if num_nickels >0:
+    if num_nickels ==1:
+        n_p = "Nickel"
+    if num_nickels >1:
+        n_p = "Nickels"
+if num_nickels >0:
+    print(num_nickels,n_p)
+
+if num_pennies > 0:
+    if num_pennies ==1:
+        p_p = "Penny"
+    if num_pennies >1:
+        p_p = "Pennies"
+if num_pennies >0:
+    print(num_pennies,p_p)
