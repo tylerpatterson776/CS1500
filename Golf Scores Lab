@@ -1,0 +1,24 @@
+par = int(input())
+strokes = int(input())
+
+if strokes == par-2:
+    result = "Eagle"
+
+if strokes == par -1:
+    result = "Birdie"
+    
+if strokes == par:
+    result = "Par"
+
+if strokes == par +1:
+    result = "Bogey"
+
+if par ==1:
+    strokes==2 
+    result = "Error"
+
+
+
+
+
+print(result)
