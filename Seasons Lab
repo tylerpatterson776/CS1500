@@ -1,0 +1,48 @@
+input_month = input()
+input_day = int(input())
+
+months = ('January', 'February','March','April','May','June','July','August','September','October','November','December')
+
+if input_month == ('January') or input_month == ('February'):
+    season = ("Winter")
+elif input_month == ('December'):
+    if input_day <=21:
+        season = ("Winter")
+elif input_month == ("March"):
+    if input_day <= 19:
+        season = ("Winter")
+
+if input_month == ('May') or input_month == ('April'):
+    season = ("Spring")
+elif input_month == ('March'):
+    if input_day >= 20:
+        season = ("Spring")
+elif input_month == ("June"):
+    if input_day <= 20:
+        season = ("Spring")
+
+if input_month == ('July') or input_month == ('August'):
+    season = ("Summer")
+elif input_month == ('June'):
+    if input_day <= 21:
+        season = ("Summer")
+elif input_month == ("September"):
+    if input_day <= 21:
+        season = ("Summer")
+        
+if input_month == ('October') or input_month == ('November'):
+    season = ("Autumn")
+elif input_month == ('September'):
+    if input_day >=22:
+        season = ("Autumn")
+elif input_month == ("December"):
+    if input_day <=20:
+        season = ("Autumn")
+
+if input_month not in months:
+    season = ("Invalid")
+if input_day < 1 or input_day > 31:
+    season = "Invalid"
+
+print(season)
+
