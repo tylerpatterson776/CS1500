@@ -1,0 +1,54 @@
+
+menu = """\
+Davy's auto shop services
+Oil change -- $35
+Tire rotation -- $19
+Car wash -- $7
+Car wax -- $12"""
+services = {
+    "Oil change" : 35,
+    "Car wax" : 12,
+    "Tire rotation": 19,
+    "Car wash" : 7,
+    }
+    
+print(menu)
+print()
+print("Select first service:")
+s1 = str(input())
+print("Select second service:")
+s2 = str(input())
+print()
+print("Davy's auto shop invoice")
+print()
+if s1 == "Oil change":
+    c1 = services["Oil change"]
+elif s1 == "Car wax":
+    c1 = services["Car wax"]
+elif s1 == "Tire rotation":
+    c1 = services["Tire rotation"]
+elif s1 == "Car wash":
+    c1 = services["Car wash"]
+
+if s2 == "Oil change":
+    c2 = services["Oil change"]
+elif s2 == "Car wax":
+    c2 = services["Car wax"]
+elif s2 == "Tire rotation":
+    c2 = services["Tire rotation"]
+elif s2 == "Car wash":
+    c2 = services["Car wash"]
+
+if s1 not in services.keys():
+    print("Service 1: No service")
+    c1 = 0
+elif s1 in services.keys():
+    print(f'Service 1: {s1}, ${c1}')
+if s2 not in services.keys():
+    print("Service 2: No service")
+    c2 = 0
+elif s2 in services.keys():
+    print(f'Service 2: {s2}, ${c2}')
+print()
+total = c1 + c2
+print(f'Total: ${total}')
