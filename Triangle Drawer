@@ -1,0 +1,9 @@
+char = input('Enter a character:\n')
+height = int(input('Enter triangle height:\n'))
+print('')
+count = 0
+char = char + ' '
+for i in range(height):
+    count +=1
+    print(char * count)
+
