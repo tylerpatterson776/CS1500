@@ -1,0 +1,24 @@
+''' Read in first equation, ax + by = c '''
+a = int(input())
+b = int(input())
+c = int(input())
+
+''' Read in second equation, dx + ey = f '''
+d = int(input())
+e = int(input())
+f = int(input())
+
+sol = False
+
+for x in range(-10,10):
+    for y in range(-10,10):
+        if a*x + b*y == c:
+            if d*x + e*y == f:
+                print(f'x = {x} , y = {y}')
+                sol = True
+
+if sol != True:
+    print("There is no solution")
+    
+    
+    
