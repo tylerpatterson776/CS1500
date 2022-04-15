@@ -1,0 +1,112 @@
+import math
+
+# ************ Rooms - Dimensions ************
+room_1_height = 15
+room_1_width = 20
+
+room_2_height = 15
+room_2_width = 40
+
+room_3_height = 15
+room_3_width = 10
+
+room_4_height = 50
+room_4_width = 10
+
+room_5_height = 40
+room_5_width = 60
+
+# ************ Halls - Dimensions **************
+hall_1_height = 1
+hall_1_width = 5
+
+hall_2_height = 45
+hall_2_width = 1
+
+hall_3_height = 1
+hall_3_width = 15
+
+hall_4_height = 1
+hall_4_width = 20
+
+hall_5_height = 1
+hall_5_width = 7
+#-------------------------------- # Defining obstacles
+yellow_square_height = 1
+yellow_square_width  = 1 
+
+red_square_height = 1
+red_square_width  = 1 
+
+purple_square_height = 1
+purple_square_width  = 1 
+
+yellow_triangle_height = 10
+yellow_triangle_base   = 7
+
+red_triangle_height = 11
+red_triangle_base = 8
+
+purple_triangle_height = 12
+purple_triangle_base = 9
+
+green_triangle_height = 15
+green_triangle_base = 12
+
+red_circle_radius = 6
+purple_circle_radius = 5
+green_circle_radius = 4
+#-------------------------------------Functions
+def rectangle_area(x,y):
+    a = x*y
+    return a
+
+def triangle_area(height,base):
+    a = ((height*base)/2)
+    return a
+    
+def circle_area(radius):
+    a = radius**2 * math.pi
+    return a
+#-----------------------------------Computing Area
+#Room 1 Hall 1
+ar1 = rectangle_area(room_1_height,room_1_width) 
+#print(ar1)
+ah1 = rectangle_area(hall_1_height,hall_1_width)
+#print(ah1)
+
+#Room 2 Hall 2
+ar2= rectangle_area(room_2_height,room_2_width)
+#print(ar2)
+ah2= rectangle_area(hall_2_height,hall_2_width)
+#print(ah2)
+
+#Room 3 Hall 3
+ar3 = rectangle_area(room_3_height,room_3_width) 
+#print(ar3)
+ah3 = rectangle_area(hall_3_height,hall_3_width)
+#print(ah3)
+        
+#Room 4 Hall 4
+ar4 = (rectangle_area(room_4_height,room_4_width)) - (rectangle_area(yellow_square_height,yellow_square_width)) - \
+(rectangle_area(purple_square_height,purple_square_width)) - (rectangle_area(red_square_height,red_square_width))
+#print(ar4)
+ah4 = rectangle_area(hall_4_height,hall_4_width)
+#print(ah4)
+
+#Room 5 Hall 5
+ar5 = (rectangle_area(room_5_height,room_5_width)) - (triangle_area(yellow_triangle_height,yellow_triangle_base)) - \
+(triangle_area(red_triangle_height,red_triangle_base)) - (triangle_area(purple_triangle_height,purple_triangle_base)) - \
+(circle_area(red_circle_radius)) - (circle_area(purple_circle_radius)) + (circle_area(green_circle_radius)) + \
+(triangle_area(green_triangle_height,green_triangle_base))
+
+ah5 = rectangle_area(hall_5_height,hall_5_width)
+
+
+
+
+
+total_area = (ar1 + ah1) + (ar2 + ah2) + (ar3 + ah3) + (ar4 + ah4) + (ar5 + ah5)
+
+print(f'Final floor area of the facility is {total_area:.4f} meters squared.',end='')
+
