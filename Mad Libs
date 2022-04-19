@@ -1,0 +1,12 @@
+
+word = ""
+
+while word != "quit":
+    user_text = input().split()
+    word = user_text[0]
+    num = user_text[1]
+    if word == 'quit':
+        break
+    print(f'Eating {num} {word} a day keeps the doctor away.')
+
+    
