@@ -1,0 +1,12 @@
+user_str = str(input())
+stig = ""
+
+for char in user_str:
+    if char.isalnum():
+        stig += char
+        
+for char in stig:
+    if char.isdigit():
+        stig = stig.replace(char,'')
+
+print(stig)
