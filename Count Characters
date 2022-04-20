@@ -1,0 +1,12 @@
+user_string = str(input())
+
+num = user_string[0]
+count = 0
+for i in user_string:
+    if i == num:
+        count += 1
+
+if count-1 == 1:
+    print(f'{count-1} {num}')
+else:
+    print(f"{count-1} {num}'s")
