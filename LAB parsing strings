@@ -1,0 +1,18 @@
+
+while True:
+    user_input = str(input())
+    num = user_input.find(',')
+    print("Enter input string:")
+    if user_input == "q":
+        break
+    if num == -1:
+        print("Error: No comma in string.")
+        print()
+        continue
+    elif num != -1:
+        name = user_input
+        name = name.split(',')
+        print(f"First word: {''.join(name[0].split())}")
+        print(f"Second word: {''.join(name[1].split())}")
+        print()
+    
