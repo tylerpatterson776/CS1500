@@ -1,0 +1,12 @@
+user_input = str(input())
+list = user_input.split(' ')
+listcap = []
+
+for i in list:
+    listcap.append(i[0])
+
+for i in listcap:
+    if i.isupper() == False:
+        listcap.remove(i)
+        
+print(f"{'.'.join(listcap)}.")
