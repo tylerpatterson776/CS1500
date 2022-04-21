@@ -1,0 +1,18 @@
+def check_character(word, index):
+    char = word[index]
+    if char.isalnum() == True:
+        if char.isdigit() == True:
+            result = f"Character '{char}' is a digit"
+        elif char.isalpha() == True:
+            result = f"Character '{char}' is a letter"
+    elif char.isspace() == True:
+        result = f"Character '{char}' is a white space"
+    else:
+        result = f"Character '{char}' is unknown"
+    return result
+  
+if __name__ == '__main__': 
+    print(check_character('happy birthday', 2))
+    print(check_character('happy birthday', 5))
+    print(check_character('happy birthday 2 you', 15))
+    print(check_character('happy birthday!', 14))
