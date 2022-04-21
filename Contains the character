@@ -1,0 +1,11 @@
+char = str(input())
+phrase = str(input())
+alle = phrase.split(' ')
+valid = []
+for i in alle:
+   l = i.count(char)
+   if l >= 1:
+       print(i)
+
+
+  
