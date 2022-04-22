@@ -1,0 +1,23 @@
+elements = 'Actinium-Aluminum-Americium-Antimony-Argon-Arsenic-Astatine-Barium-Berkelium-Beryllium-Bismuth-Bohrium-Boron-Bromine'
+symbols = ['Ac','Al','Am','Sb','Ar','As','At','Ba','Bk','Be','Bi','Bh','B','Br']
+atomic_numbers = [89,13,95,51,18,33,85,56,97,4,83,107,5,35]
+electronegativity = [1.1, 1.5,'unknown',1.9,'unknown', 2.0,2.2,0.9,'unknown',1.5,1.9,'unknown',2.0,2.8]
+
+liste = elements.split('-')
+
+print('   Name of the element   |    Symbol     |      Atomic Number      |    Electronegativity     |')
+print('-----------------------------------------------------------------------------------------------')
+for (ele,sym,num,elec) in zip(liste,symbols,atomic_numbers,electronegativity):
+    print(f'{ele:<25}|{sym:^15}|{num:^25}|{elec:^26}|')
+
+print()
+ss = '---'.join(symbols)
+print('The symbols string:')
+print(ss)
+print()
+sl = ss.lower()
+print('String symbols (in lowercase):')
+print(f'{sl}')
+print()
+print(f"The index of the element we are looking for is: {sl.find('b')}")
+print(f"{sl.count('-')}",end='')
