@@ -1,0 +1,49 @@
+def pycrypt(word):
+    vow = "a","e","i","o","u"
+    num = "1","2","3","4","5","6","7","8","9","0"
+    if word.startswith(vow):
+        word = word + "hay"
+    elif word.startswith(num):
+        word = word
+    else:
+        f = word[0]
+        word = word[1:]
+        word = word + f + "ay"
+    word = word.casefold()
+    return word
+
+
+def pycrypt_sentence(sentence):
+    sentence = sentence.split(' ')
+    wordlist = []
+    for word in sentence:
+        word = word.casefold()
+        vow = "a","e","i","o","u"
+        num = "1","2","3","4","5","6","7","8","9","0"
+        if word.startswith(vow):
+            word = word + "hay"
+            wordlist.append(word)
+        elif word.startswith(num):
+             word = word
+             wordlist.append(word)
+        else:
+            f = word[0]
+            word = word[1:]
+            word = word + f + "ay"
+            wordlist.append(word)
+    
+    final = ' '.join(wordlist)
+    return final
+
+
+
+# Input String
+
+
+
+input_string=str(input())
+test = input_string.count(' ')
+if test >= 1:
+    print(pycrypt_sentence(input_string))
+elif test == 0:
+    print(pycrypt(input_string))
