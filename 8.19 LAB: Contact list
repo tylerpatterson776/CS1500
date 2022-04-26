@@ -1,0 +1,12 @@
+user_input = input()
+desired = str(input())
+
+list1 = user_input.split()
+for ele in list1:
+    details = ele.split(',')
+    if desired == details[0]:
+        print(details[1])
+        break
+
+
+    
