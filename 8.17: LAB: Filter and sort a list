@@ -1,0 +1,13 @@
+nums = input()
+
+nums = nums.split()
+flist = []
+for num in nums:
+    num = int(num)
+    if num >= 0:
+        flist.append(num)
+
+
+flist.sort()
+final = ' '.join(str(char) for char in flist)
+print(final, end= ' ')
