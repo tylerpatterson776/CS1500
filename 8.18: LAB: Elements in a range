@@ -1,0 +1,17 @@
+ints = input()
+rec = input()
+
+ints = ints.split()
+rec = rec.split()
+
+
+ints = [int(x) for x in ints]
+rec = [int(x) for x in rec]
+final = []
+for num in ints:
+    num = int(num)
+    if num >= rec[0] and num <= rec[1]:
+        final.append(num)
+
+final = ' '.join(str(char) for char in final)
+print(final,end=' ')
