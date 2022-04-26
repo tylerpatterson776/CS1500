@@ -1,0 +1,10 @@
+def calc_average(nums):
+    total = 0
+    for num in nums:
+        total = total + num
+    avg = total / len(nums)
+    return avg
+    
+if __name__ == '__main__':
+    nums = [1, 2, 3, 4, 5]
+    print(calc_average(nums))   
