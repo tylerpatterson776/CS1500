@@ -1,0 +1,20 @@
+nums = input()
+
+nums = nums.split(' ')
+length = len(nums)
+
+if length > 9:
+    print("Too many inputs")
+elif length != 0:
+    num_to_remove = length - 1
+    side = int(num_to_remove /2)
+pos = 0
+count = 0
+while count != side:  ##Deletes first digits
+    nums.pop(pos)
+    count = count + 1
+
+
+final = nums[0]
+
+print(final)
