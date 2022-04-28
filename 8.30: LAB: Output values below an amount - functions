@@ -1,0 +1,26 @@
+inp = [ ]
+outs = [ ]
+def get_user_values():
+    while True:
+        n = int(input())
+        if n == -1:
+            break
+        else:
+            inp.append(n)
+
+    return inp
+    
+
+def output_ints_less_than_or_equal_to_threshold(inputs,threshold):
+    for x in inputs:
+        if x < threshold:
+            print(x)
+    
+    
+    
+
+if __name__ == '__main__':
+    (get_user_values())
+
+    thresh = inp[0]
+    output_ints_less_than_or_equal_to_threshold(inp,thresh)
