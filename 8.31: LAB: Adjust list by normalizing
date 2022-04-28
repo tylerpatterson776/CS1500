@@ -1,0 +1,20 @@
+user_input = input()
+
+inp = user_input.split()
+high = res_max = max(inp,key=lambda x:float(x))
+high = float(high)
+fix = [ ]
+floats = [ ]
+for num in inp:
+    num = float(num)
+    num = num/high
+    fix.append(num)
+
+for num in fix:
+    floats.append(float(num))
+
+
+for num in floats:
+    print(f'{num:.2f}', end=' ')
+
+print()
