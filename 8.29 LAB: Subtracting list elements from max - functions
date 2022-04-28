@@ -1,0 +1,17 @@
+def get_max_int(nums):
+    high = max(nums)
+    return high
+    
+if __name__ == '__main__':
+    nums = [ ]
+    adj = [ ]
+    while True:
+        n = int(input())
+        if n == -1:
+            break
+        else:
+            nums.append(n)
+    
+    high = get_max_int(nums)
+    for num in nums:
+        print(high - num)
