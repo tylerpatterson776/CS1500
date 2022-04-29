@@ -1,0 +1,10 @@
+numbers = [int(i) for i in input().split()]
+
+numbers.sort()
+
+
+
+t1 = numbers[0]
+t2 = numbers[1]
+
+print(f'{t1} and {t2}')
