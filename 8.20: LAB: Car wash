@@ -1,0 +1,20 @@
+services = { 'Air freshener' : 1 , 'Rain repellent': 2, 'Tire shine' : 2, 'Wax' : 3, 'Vacuum' : 5 }
+base_wash = 10
+total = 0
+
+service_choice1 = input()
+service_choice2 = input()
+
+print("ZyCar Wash")
+print("Base car wash -- $10")
+total = total + 10
+if service_choice1 in services:
+    x = services.get(service_choice1)
+    print(f'{service_choice1} -- ${x}')
+    total = total + x
+if service_choice2 in services:
+    y = services.get(service_choice2)
+    print(f'{service_choice2} -- ${y}')
+    total = total + y
+print("----")
+print(f'Total price: ${total}')
