@@ -1,0 +1,10 @@
+user_input = input()
+u2 = user_input.lower()
+a = user_input.split()
+b = u2.split()
+
+for word in a:
+    wl = word.lower()
+    x = b.count(wl)
+    print(f'{word} {x}')
+    
