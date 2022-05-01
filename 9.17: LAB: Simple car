@@ -1,0 +1,28 @@
+class SimpleCar:
+    def __init__(self):
+        self.miles = 0
+
+    def drive(self, dist):
+        self.miles = self.miles + dist
+        
+    def reverse(self, dist):
+        self.miles = self.miles - dist
+        
+    def get_odometer(self):
+        return self.miles
+    
+    def honk_horn(self):
+        print('beep beep')
+        
+    def report(self):
+        print(f'Car has driven: {self.miles} miles')
+        
+if __name__ == "__main__":
+    SimpleCar = SimpleCar()
+    miles = int(input())
+    SimpleCar.drive(miles)
+    rmiles = int(input())
+    SimpleCar.reverse(rmiles)
+    SimpleCar.honk_horn()
+    SimpleCar.report()
+    # TODO: Report car status
