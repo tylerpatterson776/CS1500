@@ -1,0 +1,50 @@
+class Triangle:   
+    def __init__(self):
+        self.base = 0
+        self.height = 0
+
+    def set_base(self, user_base):
+        self.base = user_base
+
+    def set_height(self, user_height):
+        self.height = user_height
+   
+    def get_area(self):
+        area = 0.5 * self.base * self.height
+        return area
+   
+    def print_info(self):
+        print(f'Base: {self.base:.2f}')
+        print(f'Height: {self.height:.2f}')
+        print(f'Area: {self.get_area():.2f}')
+
+if __name__ == "__main__":
+    t1 = Triangle()
+    t2 = Triangle()
+
+    user_base = float(input())
+    user_height = float(input())
+    t1.set_base(user_base)
+    t1.set_height(user_height)  
+    user_base = float(input())
+    user_height = float(input())
+    t2.set_base(user_base)
+    t2.set_height(user_height)
+
+    areas = []
+    
+    #print(t1.get_area())
+    areas.append(t1.get_area())
+    #print(t2.get_area())
+    areas.append(t2.get_area())
+      
+    # TODO: Determine larger triangle (use get_area())
+    
+    if areas[0] > areas[1]:
+        high = t1
+    if areas[0] < areas[1]:
+        high = t2
+
+
+    print('Triangle with larger area:')
+    high.print_info()
