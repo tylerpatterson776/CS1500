@@ -1,0 +1,39 @@
+class BankAccount:
+    def __init__(self,new_name,checking_balance,savings_balance):
+        self.name = new_name
+        self.checking_balance = checking_balance
+        self.savings_balance = savings_balance
+    
+    # TODO: Define deposit_checking()
+    def deposit_checking(self, amt):
+        if amt > 0:
+            self.checking_balance = self.checking_balance + amt
+    # TODO: Define deposit_savings()
+    def deposit_savings(self,amt):
+        if amt > 0:
+            self.savings_balance = self.savings_balance + amt
+        
+    # TODO: Define withdraw_checking()
+    def withdraw_checking(self, amt):
+        if amt > 0:
+            self.checking_balance = self.checking_balance - amt
+    # TODO: Define withdraw_savings()
+    def withdraw_savings(self, amt):
+        if amt > 0:
+            self.savings_balance = self.savings_balance - amt
+    # TODO: Define transfer_to_savings()
+    def transfer_to_savings(self, amt):
+        if amt > 0:
+            self.savings_balance = self.savings_balance + amt
+            self.checking_balance = self.checking_balance - amt
+if __name__ == "__main__":
+    account = BankAccount("Mickey", 500.00, 1000.00)
+    account.checking_balance = 500
+    account.savings_balance = 500
+    account.withdraw_savings(100)
+    account.withdraw_checking(100)
+    account.transfer_to_savings(300)
+
+    print(account.name)
+    print(f'${account.checking_balance:.2f}')
+    print(f'${account.savings_balance:.2f}')
