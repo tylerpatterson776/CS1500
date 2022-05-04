@@ -1,0 +1,18 @@
+import csv
+
+name = open(input())
+lines = csv.reader(name,delimiter=',')
+
+list = []
+for i in lines:
+    for word in i:
+        list.append(word.strip())
+
+for i in range(len(list)):
+    if list[i] not in list[:i]:
+        step = 0
+        for x in range(len(list)):
+            if list[i] == list[x]:
+                step = step + 1
+        print(list[i], step)
+        
