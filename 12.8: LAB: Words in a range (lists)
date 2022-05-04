@@ -1,0 +1,16 @@
+name = input()
+lower = input()
+upper = input()
+
+f=open(name,"r")
+
+list = [ ]
+
+x = f.readlines()
+for word in x:
+    word = word.strip()
+    if word >= lower and word <= upper:
+        list.append(word)
+        
+for word in list:
+    print(word)
