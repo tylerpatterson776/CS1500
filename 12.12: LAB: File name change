@@ -1,0 +1,11 @@
+name = input()
+file = open(name)
+
+for line in file:
+    find = "_photo.jpg"
+    replace ="_info.txt"
+    final = line.strip().replace(find,replace)
+    
+    print(final)
+
+        
